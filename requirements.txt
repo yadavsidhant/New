@@ -1,0 +1,9 @@
+streamlit
+numpy
+matplotlib
+opencv-python
+keras
+tensorflow
+keras-preprocessing
+keras-models
+base64
