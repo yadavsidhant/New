@@ -23,12 +23,12 @@ try:
     custom_objects = {
         'DepthwiseConv2D': CustomDepthwiseConv2D
     }
-    model = load_model('/Users/sidhant/Desktop/Codes/Skin_cancer_v2/full_model.h5', custom_objects=custom_objects)
+    model = load_model('full_model.h5', custom_objects=custom_objects)
 except TypeError as e:
     st.error(f"Error loading model: {e}")
 
 # Load class indices
-with open('/Users/sidhant/Desktop/Codes/Skin_cancer_v2/class_indices.json', 'r') as json_file:
+with open('class_indices.json', 'r') as json_file:
     class_indices = json.load(json_file)
 
 cancer_descriptions = {
@@ -45,8 +45,8 @@ cancer_descriptions = {
 # Load CSV files
 @st.cache_data()
 def load_csv_data():
-    test_ground_truth_file = '/Users/sidhant/Desktop/Codes/Skin_cancer_v2/ISIC2018_Task3_Test_GroundTruth.csv'
-    metadata_file = '/Users/sidhant/Desktop/Codes/Skin_cancer_v2/HAM10000_metadata.csv'
+    test_ground_truth_file = 'ISIC2018_Task3_Test_GroundTruth.csv'
+    metadata_file = 'HAM10000_metadata.csv'
     test_ground_truth_df = pd.read_csv(test_ground_truth_file)
     metadata_df = pd.read_csv(metadata_file)
     return test_ground_truth_df, metadata_df
