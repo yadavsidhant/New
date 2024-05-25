@@ -6,4 +6,3 @@ keras
 tensorflow
 keras-preprocessing
 keras-models
-base64
