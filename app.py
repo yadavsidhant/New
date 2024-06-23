@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import DepthwiseConv2D
 import base64
 st.set_page_config(
-    page_title="Vision Track",
+    page_title="Skin Cancer",
     page_icon=":world_map:️",
     layout="wide",
 )
